@@ -97,27 +97,6 @@
             text-decoration: underline;
         }
 
-        /* Full Publication Link Style */
-        .full-publication-link {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #e74c3c; /* Bright red for emphasis */
-            text-decoration: none;
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #ecf0f1;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .full-publication-link:hover {
-            background-color: #e74c3c;
-            color: white;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-        }
-
         /* Footer Section */
         #footer {
             padding: 20px 0;
@@ -132,51 +111,57 @@
     </style>
 </head>
 <body>
-    <div id="layout-content">
-        <div id="layout-content" style="margin-top:25px">
+    <div id="layout-content" style="margin-top:25px">
 
-    <table>
-        <tbody>
-            <tr>
-                <td width="670">
-                    <div id="toptitle">
-                        <h1>Shangde Gao</h1>
-                    </div>
-                    <p>
-                        <font size="3" face="Times New Roman">Ph.D. Candidate</font><br>
-                        <br>
-                        ZJU RealLab & Liangzhu Lab<br>
-                        Center for Data Science<br>
-                        College of Computer Science and Technology<br>
-                        Zhejiang University <br>
-                        Hangzhou, Zhejiang, China. 310058.<br>
-                        <br>
-                        Github: <a href="https://github.com/sender666">ShangdeGao</a><br>
-                        Scholar: <a href="https://scholar.google.cz/citations?user=JS0x3IsAAAAJ&hl=zh-CN">Google Scholar</a><br>
-                        Email: gaosde &alpha;&tau; zju &delta;&alpha;&tau; edu &delta;&alpha;&tau; cn
-                    </p>
-                </td>
-                <td>
-                    <img src="./img/gsd.jpg" border="0" width="200">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="670">
+                        <div id="toptitle">
+                            <h1>Shangde Gao<!--<img src="lk_chinesename.PNG" height="32px" style="margin-bottom:-5px" alt=''>--></h1>
+                        </div>
+                        <p>
+                            <FONT size=3 face="Times New Roman">Ph.D. Candidate</FONT><br>
+                            <br>
+                            ZJU RealLab & Liangzhu Lab<br>
+                            Center for Data Science<br>
+                            College of Computer Science and Technology<br>
+                            Zhejiang University <br>
+                            Hangzhou, Zhejiang, China. 310058.<br>
+                            <br>
+                            Github: <a href="https://github.com/sender666">ShangdeGao</a> 
+                            <br>
+                            Scholar: <a href=https://scholar.google.cz/citations?user=JS0x3IsAAAAJ&hl=zh-CN"> Google scholar</a>
+                            <br>
+                            Email: gaosde &alpha;&tau; zju &delta;&alpha;&tau; edu &delta;&alpha;&tau; cn
+                        </p>
+                    </td>
+                    <td>
+                        <img src="./img/gsd.jpg" border="0" width="200">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h2>Biography</h2>
-    <p>
-        I'm currently a fifth-year Ph.D student at the <a href="http://www.cs.zju.edu.cn/">College of Computer Science and Technology</a> at <a href="https://www.zju.edu.cn/">Zhejiang University</a>, fortunately advised by <a href="https://person.zju.edu.cn/0004274">Prof. Jian Wu</a>, and <b>scheduled to graduate in 2025</b>.
-        I got my Master's degree from Hunan University in July, 2020, majoring in Computer Science (CS), College of Computer Science and Electronic Engineering (CSEE), fortunately advised by <a href="https://csee.hnu.edu.cn/people/liaoxin">Prof. Xin Liao</a>.
-        I got my Bachelor's degree from Hunan University in July, 2017, majoring in Software Engineering (CS), College of Computer Science and Electronic Engineering (CSEE).
-        Before I got to Hunan University, all my life was spent in my hometown, Huining, Gansu province.
-    </p>
-
-    <h2>Research Interests</h2>
-    <p>
-        My research interests include <b>AI for Science</b>, <b>Computer Vision</b>, and <b>Multimedia Security</b>. In particular, I focus on applying AI technologies to scientific domains, such as knowledge distillation and fusion for image classification and segmentation tasks. My goal is to promote the development of science, especially physical science, with artificial intelligence, and to improve AI methodologies using scientific insights.
-    </p>
-
-</div>
+        <!-- Biography Section with Background Color -->
+        <h2 class="bio-title">Biography</h2>
+        <div class="bio-content">
+            <p>
+                I'm currently a fifth-year Ph.D student at the <a href="http://www.cs.zju.edu.cn/">College of Computer Science and Technology</a> at <a href="https://www.zju.edu.cn/">Zhejiang University</a>, fortunately advised by <a href="https://person.zju.edu.cn/0004274">Prof. Jian Wu</a>, and <b>scheduled to graduate in 2025</b>. 
+                I got my Master's degree from Hunan University in July, 2020 majoring in Computer Science(CS), College of Computer Science and Electronic Engineering(CSEE), fortunately advised by <a href="https://csee.hnu.edu.cn/people/liaoxin">Prof. Xin Liao</a>.  
+                I got my Bachelor's degree from Hunan University in July, 2017 majoring in Software Engineering(CS), College of Computer Science and Electronic Engineering(CSEE).  
+                Before I got to Hunan University, all my life was spent in my hometown, Huining, Gansu province.
+            </p>
+        </div>
+        
+        <!-- Research Interests Section with Background Color -->
+        <h2 class="research-title">Research Interests</h2>
+        <div class="research-content">
+            <p>
+                AI for Science, Computer Vision, and Multimedia Security. 
+                I focus on Computer Vision methods and their applications for Sciences, including knowledge distillation and fusion for image classification and segmentation.
+            </p>
+        </div>
         <!-- News Section -->
         <h2 class="news-title">News</h2>
         <div class="news-content">
@@ -257,9 +242,13 @@
             </div>
         </div>
 
-        <!-- Full Publication List Link -->
-        <a href="pub.html" class="full-publication-link">Full Publication List</a>
+        <a href="pub.html">Full publication list</a>
 
         <!-- Footer Section -->
         <div id="footer">
-            <div id="footer-text">Last updated on Oct 22nd, 202
+            <div id="footer-text">Last updated on Oct 22nd, 2024.</div>
+        </div>
+
+    </div> <!-- End of layout-content -->
+</body>
+</html>
