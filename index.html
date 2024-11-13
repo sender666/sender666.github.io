@@ -6,36 +6,31 @@
 <body>
 <div id="layout-content" style="margin-top:25px">
 
-<table>
-    <tbody>
-        <tr>
-            <td width="670">
-                <div id="toptitle">
-                    <h1>Shangde Gao<!--<img src="lk_chinesename.PNG" height="32px" style="margin-bottom:-5px" alt=''>--></h1>
-                </div>
-                <p>
-                    <FONT size=3 face="Times New Roman">Ph.D. Candidate</FONT><br>
-                    <br>
-                    ZJU RealLab & Liangzhu Lab<br>
-                    Center for Data Science<br>
-                    College of Computer Science and Technology<br>
-                    Zhejiang University <br>
-                    Hangzhou, Zhejiang, China. 310058.<br>
-                    <br>
-                    Github: <a href="https://github.com/sender666">ShangdeGao</a> 
-                    <br>
-                    Scholar: <a href=https://scholar.google.cz/citations?user=JS0x3IsAAAAJ&hl=zh-CN"> Google scholar</a>
-                    <br>
-                    Email: gaosde &alpha;&tau; zju &delta;&alpha;&tau; edu &delta;&alpha;&tau; cn
-                </p>
-            </td>
-            <td>
-                <img src="./img/gsd.jpg" border="0" width="200">
-            </td>
-        </tr>
-    </tbody>
-</table>
-
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div class="profile-container">
+                        <div class="profile-text">
+                            <h1>Shangde Gao</h1>
+                            <p><strong>Ph.D. Candidate</strong></p>
+                            <p><strong>ZJU RealLab & Liangzhu Lab</strong><br>
+                                Center for Data Science<br>
+                                College of Computer Science and Technology<br>
+                                Zhejiang University<br>
+                                Hangzhou, Zhejiang, China. 310058.</p>
+                            <p><strong>Github:</strong> <a href="https://github.com/sender666">ShangdeGao</a></p>
+                            <p><strong>Scholar:</strong> <a href="https://scholar.google.cz/citations?user=JS0x3IsAAAAJ&hl=zh-CN">Google Scholar</a></p>
+                            <p><strong>Email:</strong> gaosde &alpha;&tau; zju &delta;&alpha;&tau; edu &delta;&alpha;&tau; cn</p>
+                        </div>
+                        <div class="profile-image">
+                            <img src="./img/gsd.jpg" alt="Shangde Gao">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 <!-- Biography Section with Background Color -->
 <h2 class="bio-title">Biography</h2>
 <div class="bio-content">
@@ -74,7 +69,7 @@
     <div class="container">
         <div class="image-side">
            <img src="./paper_img/KA2ER.png" border="0" width="240">
-           <div class="label">MICCAI'24</div>
+           <div class="label">MICCAI'24 CARE Challenge (Oral Presentation)</div>
         </div>
         <div class="text-side">
             <ul>
@@ -88,7 +83,7 @@
     <!-- Repeat for other publications -->
     <div class="container">
         <div class="image-side">
-           <img src="./paper_img/Co-KA.png" border="0" width="240">
+           <img src="./paper_img/KA2ER.png" border="0" width="240">
            <div class="label">IS'24</div>
         </div>
         <div class="text-side">
@@ -207,5 +202,69 @@ Last updated on Oct 22nd, 2024.
 
         .news-item b {
             color: #008080; /* Teal for dates */
+        }
+
+        /* body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        } */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        /* Adjust layout of the table */
+        td {
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        /* Container for text and image */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Profile text styles */
+        .profile-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-right: 20px; /* Space between text and image */
+        }
+
+        .profile-text h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #2c3e50;
+        }
+
+        .profile-text a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .profile-text a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-text p {
+            margin: 8px 0;
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Image styling */
+        .profile-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
         }
 </style>
