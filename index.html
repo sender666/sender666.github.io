@@ -154,85 +154,101 @@ Last updated on Nov. 27, 2024.
 </body>
 
 <style>
-    /* Style for Section Titles */
+    /* 统一字体和色调 */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f7f7f7; /* 更简洁的背景色 */
+        color: #333333;
+    }
+    
+    /* 优化个人信息区域 */
+    #layout-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .profile-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        max-width: 1200px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* 圆形头像 */
+    }
+
+    .profile-text {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    /* 标题部分 */
     .bio-title, .research-title, .news-title, .publications-title, .links-title {
-        background-color: #f0f8ff; /* Light Blue for Titles */
-        padding: 10px;
-        border-radius: 8px;
+        background-color: #1E90FF;
+        color: #ffffff;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 24px;
+        text-align: center;
     }
 
-    /* Style for Section Content */
     .bio-content, .research-content, .news-content, .publications-content, .links-content {
-        background-color: #e6f7ff; /* Light Blue Background for Content */
-        padding: 15px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
-        border-radius: 8px;
     }
 
-    /* Custom container for publications */
+    .news-item {
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    .news-item b {
+        color: #008080;
+    }
+
+    .news-item i {
+        font-style: italic;
+        color: #ff4500;
+    }
+    
+    /* 使用卡片式布局 */
     .container {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .image-side {
-        flex-basis: 18%;
-        position: relative;
-        box-shadow: 10px 10px 5px grey;
-    }
-    .text-side {
-        flex-basis: 80%;
-    }
-    .label {
-        position: absolute; 
-        right: 0; 
-        bottom: 3;
-        padding: 3px;
-        font-size: 12px;
-        background-color: skyblue; 
-    }
-    /* News Section */
-    .news-item {
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-        .journal-name {
-            color: #1e90ff; /* Bright blue for journals */
-            font-weight: bold;
-        }
-
-        .news-item i {
-            font-style: italic;
-            color: #ff4500; /* Orange for impact factor */
-        }
-
-        .news-item b {
-            color: #008080; /* Teal for dates */
-        }
-
-        /* Profile text setup, setting fixed width to prevent line break */
-    .profile-text {
-        width: 40%; /* Adjust this percentage to control text width */
-        font-size: 16px;
-        line-height: 1.5;
+        width: 150px;
         margin-right: 20px;
     }
 
-    /* Profile image setup, setting a fixed max-width */
-    .profile-image img {
-        width: 60%; /* Adjust this percentage to control image width */
-        max-width: 400px; /* Ensure image doesn't become too large */
-        height: auto;
+    .text-side {
+        flex: 1;
     }
 
-    /* Align content and prevent word wrapping */
-    .profile-container {
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .profile-text h1, .profile-text p {
-        white-space: nowrap; /* Prevents text wrapping */
+    .label {
+        background-color: #1E90FF;
+        padding: 5px;
+        color: white;
+        font-size: 12px;
     }
 </style>
+
