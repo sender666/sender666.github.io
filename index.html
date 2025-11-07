@@ -1,115 +1,419 @@
-:root{
-  /* 色彩：紫色主题（高对比，可读性好） */
-  --bg: #f8f9fb;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --primary: #7c3aed;         /* 主紫 */
-  --primary-weak:#f3e8ff;     /* 浅紫底 */
-  --ring: rgba(124,58,237,.28);
-  --border: rgba(17,24,39,.10);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Shangde Gao's home page" />
+  <title>Shangde Gao · Zhejiang University</title>
+  <link rel="icon" href="img/gsd.jpg" />
+  <!-- System-first font stack with good CJK fallback -->
+  <style>
+    :root{
+      /* Purple theme */
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #7c3aed;         /* main purple */
+      --primary-weak:#f3e8ff;     /* subtle purple background */
+      --ring: rgba(124,58,237,.28);
+      --border: rgba(17,24,39,.10);
 
-  /* 阴影/圆角：更扁平 */
-  --shadow: 0 1px 0 rgba(17,24,39,.06);
-  --radius: 14px;
-  --radius-sm: 10px;
+      --shadow: 0 1px 0 rgba(17,24,39,.06); /* flatter */
+      --radius: 14px;
+      --radius-sm:10px;
+      --maxw: 1000px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1020;
+        --card:#0e1326;
+        --text:#e5e7eb;
+        --muted:#94a3b8;
+        --primary:#a78bfa;
+        --primary-weak:#1b1333;
+        --ring: rgba(167,139,250,.35);
+        --border: rgba(148,163,184,.22);
+        --shadow: 0 1px 0 rgba(0,0,0,.45);
+      }
+      img{opacity:.98}
+    }
 
-  --maxw: 1000px; /* 稍收窄更利于阅读 */
-}
+    /* Base */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:
+        "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1,h2,h3{font-weight:800; letter-spacing:.2px}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 18px 40px}
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b1020;
-    --card:#0e1326;
-    --text:#e5e7eb;
-    --muted:#94a3b8;
-    --primary:#a78bfa;         /* 暗色模式更亮一点的紫 */
-    --primary-weak:#1b1333;
-    --ring: rgba(167,139,250,.35);
-    --border: rgba(148,163,184,.22);
-    --shadow: 0 1px 0 rgba(0,0,0,.45);
-  }
-  img{opacity:.98}
-}
+    /* Skip link */
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 10px;background:var(--card);border-radius:8px;box-shadow:var(--shadow)}
 
-/* 全局排版微调 */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:28px 18px 40px}
-a{color:var(--primary)}
-a:hover{text-decoration:underline}
+    /* Header (flatter, fewer layers) */
+    header{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:24px;
+      align-items:start;
+      margin:18px 0 26px;
+    }
+    @media (max-width: 860px){
+      header{grid-template-columns:1fr;gap:18px}
+    }
+    .hero,
+    .portrait{
+      background: var(--card);
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .title{display:flex;align-items:center;gap:10px;margin:0 0 8px}
+    .title h1{font-size: clamp(26px, 4vw, 34px);line-height:1.1;margin:0}
+    .badge{
+      font-size:12px;line-height:1;
+      padding:6px 8px;border-radius:999px;
+      background: var(--primary-weak); color: var(--primary);
+      border:1px solid rgba(124,58,237,.18);
+    }
+    .meta{color:var(--muted);margin:4px 0 14px}
+    .hero p{margin:.45rem 0}
+    .hero .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .hero .links a{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:8px 10px;border-radius:999px;background:var(--primary-weak);
+      border:1px solid rgba(124,58,237,.18); color:var(--primary)
+    }
+    .portrait{display:flex;align-items:center;justify-content:center;padding:18px}
+    .portrait img{
+      width: 100%; max-width: 360px; height:auto; border-radius: 16px;
+      display:block; object-fit: cover;
+    }
 
-/* —— 减层：header 两列改更干净，留轻描边，不要厚阴影 —— */
-header{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap:24px;
-  align-items:start;
-  margin:18px 0 26px;
-}
-@media (max-width: 860px){ header{grid-template-columns:1fr} }
+    /* Section */
+    section{margin:26px 0}
+    .section-head{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      margin: 0 0 12px;
+    }
+    .section-head h2{
+      font-size: clamp(18px, 2.6vw, 22px);
+      margin:0;
+      padding:10px 12px;
+      background: var(--primary-weak);
+      color: var(--primary);
+      border-radius: 10px;
+      border:1px solid rgba(124,58,237,.18);
+    }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
 
-/* 卡片：去厚阴影 + 改细边 + 轻底色 */
-.card,
-.hero,
-.portrait{
-  background: var(--card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);        /* 轻影 */
-}
+    /* Typography helpers */
+    .prose p{margin:.65rem 0}
+    .muted{color:var(--muted)}
+    /* Unify emphasis to purple */
+    b, strong, em, i { color: var(--primary); font-style: normal; }
 
-/* 标题区：紫色小条做强调，干净明快 */
-.section-head h2{
-  font-size: clamp(18px, 2.6vw, 22px);
-  margin:0;
-  padding:10px 12px;
-  background: var(--primary-weak);
-  color: var(--primary);
-  border-radius: 10px;
-  border:1px solid rgba(124,58,237,.18);
-}
+    /* News */
+    .news-list{display:grid;gap:10px}
+    .news-item{
+      display:grid;
+      grid-template-columns: 110px 1fr;
+      gap:14px;
+      padding:12px;
+      border-radius: var(--radius-sm);
+      border:1px dashed rgba(124, 58, 237, .28);
+      background: #fbf7ff;
+    }
+    .news-item time{ font-weight:600; color:var(--primary) }
+    .news-item .jnl{font-weight:700}
+    .news-item i{font-style:italic; color: var(--primary) }
+    @media (max-width:640px){
+      .news-item{grid-template-columns:1fr}
+    }
 
-/* —— 强调文字统一用紫色 —— */
-b, strong, em, i { color: var(--primary); font-style: normal; }
-.muted{ color: var(--muted); }
+    /* Publications */
+    .pub-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 820px){
+      .pub-grid{grid-template-columns: 1fr 1fr}
+    }
+    .pub{
+      display:grid; grid-template-columns: 120px 1fr; gap:14px;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background: var(--card);
+    }
+    @media (max-width:520px){ .pub{grid-template-columns:1fr} }
+    .pub .thumb{
+      position:relative;background:#f7f2ff;display:flex;align-items:center;justify-content:center
+    }
+    .pub .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .ribbon{
+      position:absolute;left:10px;top:10px;
+      font-size:12px;padding:6px 8px;border-radius:999px;
+      background: var(--primary); color:#fff;
+    }
+    .pub .body{padding:14px}
+    .pub .title{font-weight:800;margin:0 0 6px;color:var(--text)}
+    .pub .authors{margin:0 0 6px}
+    .pub .authors strong{ color: var(--primary); }
+    .pub .where{margin:0 0 10px;color:var(--muted)}
+    .pub .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:7px 10px;border-radius:999px;
+      background: var(--primary-weak); color: var(--primary);
+      border:1px solid rgba(124,58,237,.18);
+    }
 
-/* 小徽章/按钮改紫色体系 */
-.badge{
-  font-size:12px;line-height:1;
-  padding:6px 8px;border-radius:999px;
-  background: var(--primary-weak); color: var(--primary);
-  border:1px solid rgba(124,58,237,.18);
-}
-.links a,
-.chip{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:8px 10px;border-radius:999px;
-  background: var(--primary-weak); color: var(--primary);
-  border:1px solid rgba(124,58,237,.18);
-}
+    /* Useful links */
+    .links ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .links li a{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 14px;border-radius:12px;background: var(--card);
+      box-shadow: var(--shadow); border:1px solid var(--border);
+    }
 
-/* News 样式更扁平：去渐变，改细描边+淡底 */
-.news-item{
-  display:grid;grid-template-columns: 110px 1fr;gap:14px;
-  padding:12px;border-radius: var(--radius-sm);
-  border:1px dashed rgba(124,58,237,.28);
-  background: #fbf7ff; /* 极浅紫底 */
-}
-.news-item time{ font-weight:600;color:var(--primary) }
+    /* Footer */
+    footer{
+      margin-top:28px;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap
+    }
+    .visit img{display:block;max-height:34px}
 
-/* Publications：卡片减层，缩小缩略图比例，信息更聚焦 */
-.pub{
-  display:grid; grid-template-columns: 120px 1fr; gap:14px;
-  border:1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card);
-}
-.pub .thumb{ background:#f7f2ff; }
-.ribbon{
-  position:absolute;left:10px;top:10px;font-size:12px;padding:6px 8px;
-  border-radius:999px;background: var(--primary); color:#fff;
-}
+    /* Focus */
+    a,button,[tabindex]:focus{outline: 3px solid transparent; box-shadow: 0 0 0 3px var(--ring)}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <div class="hero" role="banner">
+        <div class="title">
+          <h1 style="font-weight:800; letter-spacing:.2px; line-height:1.1;">Shangde Gao</h1>
+          <span class="badge">Ph.D. Candidate @ ZJU</span>
+        </div>
+        <p class="meta">ZJU RealLab & Liangzhu Lab · Center for Data Science · College of Computer Science and Technology</p>
+        <p>Hangzhou, Zhejiang, China · 310058</p>
+        <div class="prose">
+          <p>
+            Github: <a href="https://github.com/sender666" rel="me">ShangdeGao</a> &nbsp;·&nbsp;
+            Scholar: <a href="https://scholar.google.cz/citations?user=JS0x3IsAAAAJ&hl=zh-CN" rel="noopener">Google Scholar</a><br/>
+            Email: <span class="muted">gaosde [at] zju [dot] edu [dot] cn</span>
+          </p>
+        </div>
+        <div class="links" aria-label="Quick links">
+          <a href="#bio" aria-label="Go to Biography">Biography</a>
+          <a href="#research" aria-label="Go to Research Interests">Research</a>
+          <a href="#news" aria-label="Go to News">News</a>
+          <a href="#pubs" aria-label="Go to Selected Publications">Publications</a>
+          <a href="#links" aria-label="Go to Useful Links">Useful Links</a>
+        </div>
+      </div>
 
-/* 焦点可视化：与主题紫一致 */
-a,button,[tabindex]:focus{
-  outline: 3px solid transparent; box-shadow: 0 0 0 3px var(--ring)
-}
+      <div class="portrait">
+        <img src="./img/gsd.png" alt="Portrait of Shangde Gao" loading="lazy" />
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- Biography -->
+      <section id="bio" aria-labelledby="bio-h">
+        <div class="section-head"><h2 id="bio-h">Biography</h2></div>
+        <div class="card prose">
+          <p>
+            I am a final-year Ph.D. candidate at the
+            <a href="http://www.cs.zju.edu.cn/">College of Computer Science and Technology</a>,
+            <a href="https://www.zju.edu.cn/">Zhejiang University</a>, supervised by
+            <a href="https://person.zju.edu.cn/0004274">Prof. Jian Wu</a>. I am
+            <strong>scheduled to graduate in Sep 2025</strong>.
+          </p>
+          <p>
+            I obtained my M.S. in Computer Science from
+            <a href="https://www.hnu.edu.cn/">Hunan University</a> (July 2020), advised by
+            <a href="https://csee.hnu.edu.cn/people/liaoxin">Prof. Xin Liao</a> at the
+            <a href="https://csee.hnu.edu.cn/">College of Computer Science and Electronic Engineering</a>.
+            I received my B.S. in Software Engineering from Hunan University in July 2017.
+          </p>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research" aria-labelledby="res-h">
+        <div class="section-head"><h2 id="res-h">Research Interests</h2></div>
+        <div class="card prose">
+          <p>
+            Computer Vision, AI for Science. I focus on Computer Vision methods and their
+            applications for Sciences, including knowledge distillation and fusion for
+            real-world classification and segmentation tasks.
+          </p>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section id="news" aria-labelledby="news-h">
+        <div class="section-head"><h2 id="news-h">News</h2></div>
+        <div class="card">
+          <div class="news-list">
+            <div class="news-item">
+              <time datetime="2025-09">[2025.09]</time>
+              <div>One paper was accepted by <span class="jnl">NeurIPS 2025</span>.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2025-06">[2025.06]</time>
+              <div>Two papers were accepted by <span class="jnl">MICCAI 2025</span>.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2025-04">[2025.04]</time>
+              <div>One paper was accepted by the <span class="jnl">International Joint Conference on Artificial Intelligence</span> (<i>IJCAI</i>).</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2025-04">[2025.04]</time>
+              <div>One paper was accepted by the <span class="jnl">International Conference on Intelligent Computing</span> (<i>ICIC</i>).</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2025-04">[2025.04]</time>
+              <div>One paper was accepted by the <span class="jnl">International Joint Conference on Neural Networks</span> (<i>IJCNN</i>).</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2024-09">[2024.09]</time>
+              <div>One paper was accepted by the <span class="jnl">MICCAI 2024</span> CARE challenge.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2024-04">[2024.04]</time>
+              <div>One paper was accepted by <span class="jnl">Information Sciences</span> <i>(IF=8.1)</i>.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2024-02">[2024.02]</time>
+              <div>One paper was accepted by <span class="jnl">Neural Computing and Applications</span> <i>(IF=4.7)</i>.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2023-09">[2023.09]</time>
+              <div>One paper was accepted by <span class="jnl">ICANN</span>.</div>
+            </div>
+            <div class="news-item">
+              <time datetime="2023-06">[2023.06]</time>
+              <div>One paper was accepted by <span class="jnl">IJCNN</span>.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="pubs" aria-labelledby="pubs-h">
+        <div class="section-head"><h2 id="pubs-h">Selected Publications</h2></div>
+        <div class="pub-grid">
+          <!-- Pub 1 -->
+          <article class="pub" aria-labelledby="p1-title">
+            <div class="thumb">
+              <img src="./paper_img/KA2ER.png" alt="KA2ER paper thumbnail" loading="lazy" />
+              <span class="ribbon">MICCAI'24 CARE</span>
+            </div>
+            <div class="body">
+              <p class="title" id="p1-title">KA$^2$ER: Knowledge Adaptive Amalgamation of ExpeRts for Medical Images Segmentation</p>
+              <p class="authors"><strong>Shangde Gao</strong>, Yichao Fu, Ke Liu, Hongxia Xu, Jian Wu</p>
+              <p class="where">Proc. MICCAI 2024 · <b>Oral</b></p>
+              <div class="actions">
+                <a class="chip" href="https://arxiv.org/abs/2410.21085">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pub 2 -->
+          <article class="pub" aria-labelledby="p2-title">
+            <div class="thumb">
+              <img src="./paper_img/Co-KA.png" alt="Collaborative knowledge amalgamation thumbnail" loading="lazy" />
+              <span class="ribbon">IS'24</span>
+            </div>
+            <div class="body">
+              <p class="title" id="p2-title">Collaborative knowledge amalgamation: Preserving discriminability and transferability in unsupervised learning</p>
+              <p class="authors"><strong>Shangde Gao*</strong>, Yichao Fu*, Ke Liu*, Wei Gao, Hongxia Xu, Jian Wu, Yuqiang Han</p>
+              <p class="where">Information Sciences</p>
+              <div class="actions">
+                <a class="chip" href="https://www.sciencedirect.com/science/article/pii/S0020025524004778">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pub 3 -->
+          <article class="pub" aria-labelledby="p3-title">
+            <div class="thumb">
+              <img src="./paper_img/CKA.png" alt="Contrastive Knowledge Amalgamation thumbnail" loading="lazy" />
+              <span class="ribbon">ICANN'23</span>
+            </div>
+            <div class="body">
+              <p class="title" id="p3-title">Contrastive Knowledge Amalgamation for Unsupervised Image Classification</p>
+              <p class="authors"><strong>Shangde Gao*</strong>, Yichao Fu*, Ke Liu*, Yuqiang Han</p>
+              <p class="where">Proc. ICANN 2023 · <b>Oral</b></p>
+              <div class="actions">
+                <a class="chip" href="https://link.springer.com/chapter/10.1007/978-3-031-44210-0_16">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pub 4 -->
+          <article class="pub" aria-labelledby="p4-title">
+            <div class="thumb">
+              <img src="./paper_img/PCVAE.png" alt="PCVAE thumbnail" loading="lazy" />
+              <span class="ribbon">IJCNN'23</span>
+            </div>
+            <div class="body">
+              <p class="title" id="p4-title">PCVAE: a Physics-Informed Neural Network for Determining the Symmetry and Geometry of Crystals</p>
+              <p class="authors">Ke Liu, <strong>Shangde Gao</strong>, Kaifan Yang, Yuqiang Han</p>
+              <p class="where">Proc. IJCNN 2023 · <b>Oral</b></p>
+              <div class="actions">
+                <a class="chip" href="https://github.com/zjuKeLiu/PCVAE">Code</a>
+                <a class="chip" href="https://ieeexplore.ieee.org/document/10191051">Paper</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Useful Links -->
+      <section id="links" aria-labelledby="links-h" class="links">
+        <div class="section-head"><h2 id="links-h">Useful Links</h2></div>
+        <ul>
+          <li><a href="https://www.webhub123.com/#/home/detail?projectHashid=67078656&ownerUserid=27786724">Paper writing <span class="muted">↗</span></a></li>
+          <li><a href="./gallary/pic.html">Gallary</a></li>
+        </ul>
+      </section>
+
+      <!-- Visit tracker -->
+      <section aria-label="Visit tracker" class="visit card">
+        <a href="https://clustrmaps.com/site/1bo3n" title="Visit tracker for zjukeliu.github.io">
+          <img src="//www.clustrmaps.com/map_v2.png?d=B5fwmGJ_EF2SXft9eqvqwSRv3hWvHeRegc-qAMWUY7c&cl=ffffff" alt="Visit tracker map"/>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div>Last updated on Nov. 27, 2024.</div>
+      <div class="small">© Shangde Gao</div>
+    </footer>
+  </div>
+</body>
+</html>
