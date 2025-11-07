@@ -9,12 +9,12 @@
   <style>
     :root{
       --bg:#ffffff;
-      --text:#111827;         /* gray-900 */
-      --muted:#4b5563;        /* gray-600 */
-      --light:#6b7280;        /* gray-500 */
-      --line:#e5e7eb;         /* gray-200 */
-      --accent:#b43fe0;       /* light purple (user prefers brighter) */
-      --accent-weak:#f7e9fd;  /* very light purple for subtle marks */
+      --text:#111827;
+      --muted:#4b5563;
+      --light:#6b7280;
+      --line:#e5e7eb;
+      --accent:#b43fe0;       /* bright purple */
+      --accent-weak:#f7e9fd;
       --maxw: 1000px;
     }
     @media (prefers-color-scheme: dark){
@@ -46,9 +46,8 @@
     .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 18px 56px}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    code,kbd,pre{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 
-    /* Header: two-column intro, no cards, no shadows */
+    /* Header: two-column intro */
     header{
       display:grid;
       grid-template-columns: 1.25fr .75fr;
@@ -68,42 +67,35 @@
     }
     .subtitle{color:var(--muted); margin: 6px 0 18px; font-size: 18px;}
     .contact{color:var(--light); font-size:16px}
-    .portrait{display:block}
-    .portrait img{
-      width: 100%; max-width: 360px; height: auto; display:block;
-      /* straight corners, no radius */
-    }
+    .portrait img{width:100%; max-width:360px; height:auto; display:block}
 
-    /* Section headings + separators */
+    /* Sections + separators */
     section{padding: 28px 0}
     .section-title{
       font-size: clamp(22px, 3vw, 34px);
-      font-weight:800;
+      font-weight:800;           /* default bold for section titles */
       margin: 0 0 6px;
       letter-spacing:.2px;
     }
+    /* Lighter title JUST for Selected publications */
+    #pubs .section-title{ font-weight:600; }
     .section-sub{color:var(--muted); margin: 2px 0 18px; font-size:16px}
     .sep{height:1px;background:var(--line);border:0;margin:18px 0 6px}
 
-    /* Biography paragraphs */
     .prose p{margin:.85rem 0}
 
-    /* News list: date column + item */
-    .news{
-      display:grid; gap:12px;
-    }
+    /* News list structure (keep existing layout) */
+    .news{ display:grid; gap:12px }
     .news-row{
       display:grid;
       grid-template-columns: 140px 1fr;
       gap:18px;
     }
     .news-row time{font-weight:600;color:var(--text)}
-    .news-row .txt a{color:var(--accent)}
-    @media (max-width:640px){
-      .news-row{grid-template-columns:1fr}
-    }
+    .news-row .txt i{font-style:italic}
+    @media (max-width:640px){ .news-row{grid-template-columns:1fr} }
 
-    /* Publications: simple vertical list, no cards */
+    /* Publications list */
     .pubs{display:grid; gap:18px}
     .pub{
       display:grid;
@@ -113,17 +105,13 @@
     }
     .pub .thumb{background:var(--accent-weak); display:flex; align-items:center; justify-content:center;}
     .pub .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .pub .title{font-weight:800;margin:0 0 6px}
+    .pub .title{font-weight:600;margin:0 0 6px}
     .pub .meta{color:var(--muted); margin:0 0 10px}
     .pub .authors strong{color:var(--accent)}
     .chips{display:flex; gap:10px; flex-wrap:wrap; font-size:15px}
-    .chip{
-      padding:4px 10px; border:1px solid var(--line);
-      border-radius: 4px; /* tiny radius like GitHub labels */
-    }
+    .chip{ padding:4px 10px; border:1px solid var(--line); border-radius: 4px; }
     @media (max-width:560px){ .pub{grid-template-columns:1fr} }
 
-    /* Footer */
     footer{color:var(--light); font-size:14px; padding-top:24px}
   </style>
 </head>
@@ -146,7 +134,7 @@
       </div>
     </header>
 
-    <!-- About / Biography -->
+    <!-- About -->
     <section id="bio">
       <h2 class="section-title">About</h2>
       <hr class="sep" />
@@ -172,35 +160,55 @@
       </div>
     </section>
 
-    <!-- News -->
+    <!-- Latest news (keep structure, replace content per user) -->
     <section id="news">
       <h2 class="section-title">Latest news</h2>
       <hr class="sep" />
       <div class="news">
         <div class="news-row">
-          <time datetime="2025-09">Oct 30, 2025</time>
-          <div class="txt">Our paper was accepted at <a href="#">NeurIPS 2025</a>!</div>
+          <time datetime="2025-09">[2025.09]</time>
+          <div class="txt">One paper was accepted by <span class="jnl">NeurIPS 2025</span>.</div>
         </div>
         <div class="news-row">
-          <time datetime="2025-06">Sep 23, 2025</time>
-          <div class="txt">Our paper received the Best Paper Award at MICCAI AMAI 2025.</div>
+          <time datetime="2025-06">[2025.06]</time>
+          <div class="txt">Two papers were accepted by <span class="jnl">MICCAI 2025</span>.</div>
         </div>
         <div class="news-row">
-          <time datetime="2025-06">Jun 17, 2025</time>
-          <div class="txt">Four of our papers have been accepted by MICCAI 2025.</div>
+          <time datetime="2025-04">[2025.04]</time>
+          <div class="txt">One paper was accepted by the <span class="jnl">International Joint Conference on Artificial Intelligence</span> (<i>IJCAI</i>).</div>
         </div>
         <div class="news-row">
-          <time datetime="2025-04">May 27, 2025</time>
-          <div class="txt">Our MICCAI SIG‑xMedIA Online Seminar is taking place!</div>
+          <time datetime="2025-04">[2025.04]</time>
+          <div class="txt">One paper was accepted by the <span class="jnl">International Conference on Intelligent Computing</span> (<i>ICIC</i>).</div>
         </div>
         <div class="news-row">
-          <time datetime="2025-04">May 25, 2025</time>
-          <div class="txt"><strong>Join us—The MICCAI 2025 CARE Challenge is live!</strong></div>
+          <time datetime="2025-04">[2025.04]</time>
+          <div class="txt">One paper was accepted by the <span class="jnl">International Joint Conference on Neural Networks</span> (<i>IJCNN</i>).</div>
+        </div>
+        <div class="news-row">
+          <time datetime="2024-09">[2024.09]</time>
+          <div class="txt">One paper was accepted by the <span class="jnl">MICCAI 2024</span> CARE challenge.</div>
+        </div>
+        <div class="news-row">
+          <time datetime="2024-04">[2024.04]</time>
+          <div class="txt">One paper was accepted by <span class="jnl">Information Sciences</span> <i>(IF=8.1)</i>.</div>
+        </div>
+        <div class="news-row">
+          <time datetime="2024-02">[2024.02]</time>
+          <div class="txt">One paper was accepted by <span class="jnl">Neural Computing and Applications</span> <i>(IF=4.7)</i>.</div>
+        </div>
+        <div class="news-row">
+          <time datetime="2023-09">[2023.09]</time>
+          <div class="txt">One paper was accepted by <span class="jnl">ICANN</span>.</div>
+        </div>
+        <div class="news-row">
+          <time datetime="2023-06">[2023.06]</time>
+          <div class="txt">One paper was accepted by <span class="jnl">IJCNN</span>.</div>
         </div>
       </div>
     </section>
 
-    <!-- Publications -->
+    <!-- Selected publications -->
     <section id="pubs">
       <h2 class="section-title">Selected publications</h2>
       <hr class="sep" />
@@ -275,11 +283,11 @@
       <p><a href="https://www.webhub123.com/#/home/detail?projectHashid=67078656&ownerUserid=27786724">Paper writing</a> · <a href="./gallary/pic.html">Gallary</a></p>
     </section>
 
-    <!-- Visit tracker (kept) -->
+    <!-- Visit tracker -->
     <section id="visit">
       <h2 class="section-title">Visits</h2>
       <hr class="sep" />
-      <a href="https://clustrmaps.com/site/1bo3n" title="Visit tracker for zjukeliu.github.io">
+      <a href="https://clustrmaps.com/site/1bo3n" title="Visit tracker for shangdegao.github.io">
         <img src="//www.clustrmaps.com/map_v2.png?d=B5fwmGJ_EF2SXft9eqvqwSRv3hWvHeRegc-qAMWUY7c&cl=ffffff" alt="Visit tracker map" style="max-height:34px"/>
       </a>
     </section>
