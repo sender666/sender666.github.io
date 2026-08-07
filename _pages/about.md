@@ -9,7 +9,7 @@ profile:
   image: shangde-gao.png
   image_circular: false
   more_info: >
-    <p>gaosde at zju dot edu dot cn</p>
+    <p>gaosde@zju.edu.cn</p>
     <p>Hangzhou, Zhejiang, China</p>
 
 selected_papers: true
