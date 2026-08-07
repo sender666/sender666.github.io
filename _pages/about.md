@@ -6,7 +6,7 @@ subtitle: Postdoctoral Researcher · School of Medicine · Zhejiang University
 
 profile:
   align: right
-  image: shangde-gao.png
+  image: shangde-gao-2026.png
   image_circular: false
   more_info: >
     <p>gaosde@zju.edu.cn</p>
