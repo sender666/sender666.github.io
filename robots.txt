@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sender666.github.io/sitemap.xml
