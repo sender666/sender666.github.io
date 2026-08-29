@@ -2,58 +2,50 @@
   type: map
   contents:
     - name: Full Name
-      value: Dr Shangqi Gao
+      value: Dr Shangde Gao
     - name: Affiliation
-      value: Early Cancer Institute, University of Cambridge
+      value: Zhejiang University School of Medicine, Zhejiang University
     - name: Address
-      value: CB2 0XZ, Cambridge, UK
+      value: Hangzhou, Zhejiang, China
     - name: Email
-      value: sg2162@cam.ac.uk
+      value: gaosde@zju.edu.cn
     - name: Research Interests
-      value: Explainable and trustworthy medical AI; generalizable medical image analysis; Bayesian deep learning; multimodal cancer data integration
-
+      value: Computer Vision, AI for Healthcare
 - title: Academic Experience
   type: time_table
   contents:
-    - title: Research Associate
-      institution: University of Cambridge, Cambridge, UK
-      year: Mar 2024 - Present
+    - title: Postdoctoral Research Associate
+      institution: Zhejiang University, Hangzhou, China
+      year: Mar 2026 - Present
       description:
-        - AI for cancer imaging integrating machine learning and multi-omics data
-        - Affiliated with the Early Cancer Institute, Department of Oncology
-        - "Supervisor: Dr Mireia Crispin-Ortuzar"
+        - AI for Cardiovascular imaging and diseases 
+        - Affiliated with Transvascular Implantation Devices Research Institute and State Key Laboratory of Transvascular Implantation Devices
+        - "Supervisor: Dr Jian Wu and Dr Jun Jiang"
 
-    - title: Postdoctoral Research Assistant
-      institution: University of Oxford, Oxford, UK
-      year: Apr 2023 - Feb 2024
-      description:
-        - Urological cancer pathology AI and uncertainty-aware deep learning
-        - Affiliated with the Nuffield Department of Surgical Sciences
-        - "Supervisors: Prof Clare Verrill and Prof Jens Rittscher"
-
+   
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Statistics
-      institution: School of Data Science, Fudan University, Shanghai, China
-      year: Sep 2018 - Jul 2022
+    - title: PhD in Computer Science
+      institution: School of Computer Science and Technology, Zhejiang University, Hangzhou, China
+      year: Sep 2020 - Dec 2025
       description:
-        - "Thesis: Deep Image Decomposition and Reconstruction"
-        - "Advisor: Prof Xiahai Zhuang"
+        - "Thesis: Medical Artificial Intelligence, Knowledge Distillation, and Amalgamation of Multi-modal Data"
+        - "Advisor: Prof Jian Wu"
 
-    - title: MSc in Applied Mathematics
-      institution: School of Mathematics and Statistics, Wuhan University, Wuhan, China
-      year: Sep 2015 - Jul 2018
+    - title: MSc in Computer Science
+      institution: School of Computer Science and Technology, Hunan University, Changsha, China
+      year: Sep 2017- Jul 2020
       description:
-        - "Thesis: Regularization-Based Approaches for Tensor Completion"
-        - "Advisor: Prof Qibin Fan"
+        - "Thesis: Image Processing and Analysis"
+        - "Advisor: Prof Xin Liao"
 
-    - title: BSc in Applied Mathematics
-      institution: Department of Mathematics, Northwestern Polytechnical University, Xi'an, China
+    - title: BSc in Software Engineering
+      institution: School of Computer Science and Technology, Hunan University, Changsha, China
       year: Sep 2011 - Jul 2015
       description:
-        - "Thesis: Fourier Analysis and Its Applications in Solving Differential and Integral Equations"
-        - "Advisor: Prof Pengcheng Niu"
+        - "Image Processing and Analysis"
+        - "Advisor: Prof Xin Liao"
 
 - title: Honors and Awards
   type: time_table
@@ -61,163 +53,6 @@
     - year: 2026
       items:
         - Best Paper Award Candidate, CVPR
-    - year: 2025
-      items:
-        - Best Paper Award, MICCAI AMAI
-    - year: 2023
-      items:
-        - Shanghai Natural Science Award (2/5), Shanghai Government
-        - Elsevier-MedIA First Prize and Medical Image Analysis Best Paper Award, MICCAI
-    - year: 2022
-      items:
-        - Excellent Graduate Award, Shanghai Higher Education Department
-        - Best Paper Finalist, MICCAI
-    - year: 2021
-      items:
-        - National Graduate Scholarship (PhD), Fudan University
-    - year: 2017
-      items:
-        - National Graduate Scholarship (MSc), Wuhan University
-    - year: 2014
-      items:
-        - Meritorious Winner of the Mathematical Contest in Modeling, SIAM
-    - year: 2013
-      items:
-        - Honorable Mention in the Mathematical Contest in Modeling, CSIAM
-    - year: 2012
-      items:
-        - National Endeavor Scholarship, Northwestern Polytechnical University
-
-- title: Research Projects
-  type: time_table
-  contents:
-    - title: Multi-omics Data Integration for Ovarian Carcinoma
-      institution: DAWN Pioneer Project, Cambridge, UK
-      year: 2025 - 2026
-      description:
-        - Principal Investigator
-        - 10,000 GPU hours (£5,500)
-
-    - title: Computational Pathology and Multi-omics Data Integration for Ovarian Carcinoma
-      institution: EPSRC Tier-2 HPC, Cambridge, UK
-      year: 2024 - 2025
-      description:
-        - Co-lead
-        - 40,000 GPU hours (£22,000)
-
-    - title: Longitudinal Image and Volumetric Analysis, Visualisation and Measurements
-      institution: GE HealthCare-Cambridge, Cambridge, UK
-      year: 2024 - 2026
-      description:
-        - Research Associate
-
-    - title: Urological Cancer Pathology AI - Beyond Prostate
-      institution: Medical Research Council, Oxford, UK
-      year: 2023 - 2024
-      description:
-        - Postdoctoral Research Assistant
-
-    - title: Methodologies and Applications of Combined Segmentation of Multimodality Cardiac Images Based on Multivariate Mixture Models
-      institution: National Natural Science Foundation of China, Shanghai, China
-      year: 2020 - 2023
-
-    - title: Self-supervised Deep Learning for Multimodal Whole Heart Segmentation of Four-dimensional Cine Images
-      institution: NSFC-STINT China-Sweden Joint Research Grant, Shanghai, China
-      year: 2021 - 2023
-
-    - title: Cardiac Image Segmentation via Deep Learning with Regularization Using Prior Subnetworks
-      institution: NSFC-NRF China-Korea Joint Research Grant, Shanghai, China
-      year: 2020 - 2022
-
-- title: Teaching and Supervision
-  type: time_table
-  contents:
-    - title: Supervisor, Why Should I Trust You? Explainable AI in Cancer Imaging
-      institution: MPhil in Data Intensive Science, Department of Physics, University of Cambridge
-      year: 2025
-
-    - title: Supervisor, Training-free OOD Medical Tumor Segmentation via Anatomical Reasoning and Statistical Rejection
-      institution: PhD candidate, School of Computer Science, Carnegie Mellon University
-      year: 2025 - 2026
-
-    - title: Supervisor, Towards Generalizable Retinal Vessel Segmentation with Deformable Graph Priors
-      institution: PhD candidate, School of Computer Science, Zhejiang University
-      year: 2024 - 2025
-
-    - title: Co-supervisor, Multi-modal MRI Translation via Evidential Regression and Distribution Calibration
-      institution: PhD candidate, TSTBI, Fudan University
-      year: 2024 - 2025
-
-    - title: Guest Lecturer, Image Processing and Analysis
-      institution: Summer Programme, Homerton College, University of Cambridge
-      year: Aug 2024
-
-    - title: Co-supervisor, InDeed - Interpretable Image Deep Decomposition with Guaranteed Generalizability
-      institution: PhD candidate, School of Data Science, Fudan University
-      year: 2023 - 2024
-
-    - title: Guest Lecturer, DATA630015 Medical Image Analysis
-      institution: School of Data Science, Fudan University
-      year: 2020 - 2021
-
-    - title: Teaching Assistant, DATA130012.01 Data Visualization
-      institution: School of Data Science, Fudan University
-      year: 2019 - 2020
-
-    - title: Teaching Assistant, Sparsity in Statistics
-      institution: School of Data Science, Fudan University
-      year: 2018 - 2019
-
-- title: Presentations and Talks
-  type: time_table
-  contents:
-    - title: "Invited talk: Explainable Integration of Radiology and Pathology for Pan-Cancer Analysis"
-      institution: Early Cancer Institute, University of Cambridge
-      year: Jul 2026
-
-    - title: "Invited talk: Probabilistic Modelling and Bayesian Deep Learning in Multimodal Data Integration"
-      institution: Hawkes Institute, University College London
-      year: Apr 2026
-
-    - title: "Oral: Towards Generalizable Retinal Vessel Segmentation with Deformable Graph Priors"
-      institution: NeurIPS@Cam Early Career Researcher Conference, University of Cambridge
-      year: Dec 2025
-
-    - title: "Poster: Can Foundation Segmentation Models Generalize to Breast Cancer?"
-      institution: ESMO AI and Digital Oncology, Berlin, Germany
-      year: Nov 2025
-
-    - title: "Invited talk: Explainable Integration of Kidney Cancer Radiology and Pathology"
-      institution: Jeffrey Cheah Biomedical Centre, University of Cambridge
-      year: Oct 2025
-
-    - title: "Poster: Probabilistic Integration of Renal Cancer Radiology and Pathology Using Graph Neural Networks"
-      institution: MICCAI, Daejeon, South Korea
-      year: Sep 2025
-
-    - title: "Oral: Evaluating Foundation Models with Pathological Concept Learning for Kidney Cancer"
-      institution: MICCAI AMAI, Daejeon, South Korea
-      year: Sep 2025
-
-    - title: "Oral: Bayesian Modeling for Medical Image Segmentation with Interpretable Generalizability"
-      institution: Robust Cancer Early Detection Systems under Distribution Shifts and Uncertainty Workshop, University of Cambridge
-      year: Jun 2024
-
-    - title: "Invited talk: Bayesian Modeling for Medical Image Segmentation with Interpretable Generalizability"
-      institution: First Youth Academic Forum on Intelligent Imaging, Chinese Society of Stereology
-      year: Apr 2023
-
-    - title: "Poster: Joint Modelling of Image and Label Statistics for Enhancing Model Generalizability of Medical Image Segmentation"
-      institution: MICCAI, Singapore
-      year: Sep 2022
-
-    - title: "Invited talk: Bayesian Deep Learning - Applications in Natural Image Super-Resolution and Medical Image Segmentation"
-      institution: 1075th Academic Seminar on Biomedical and Health Engineering, Shenzhen
-      year: Jun 2022
-
-    - title: "Seminar: Rank-One Network - An Efficient Framework for Image Restoration"
-      institution: Applied Mathematics PhD Seminar, School of Mathematics, Fudan University
-      year: Jun 2021
 
 - title: Selected Publications
   type: time_table
@@ -234,45 +69,29 @@
       description:
         - K Liu, S Gao, Y Fu, and S Gao
 
-    - title: "BayeSeg: Bayesian Modeling for Medical Image Segmentation with Interpretable Generalizability"
-      institution: Medical Image Analysis, 89(7), 102889
-      year: 2023
+    - title: "Collaborative knowledge amalgamation: Preserving discriminability and transferability in unsupervised learning"
+      institution: Information Sciences 669 (2024), 120564.
+      year: 2024
       description:
-        - S Gao, H Zhou, Y Gao, and X Zhuang
-        - Elsevier-MedIA First Prize and MICCAI Medical Image Analysis Best Paper Award
+        - S Gao, Y Fu, K Liu, W Gao, H Xu, J Wu and Y Han
 
-    - title: Bayesian Image Super-Resolution with Deep Modelling of Image Statistics
-      institution: IEEE Transactions on Pattern Analysis and Machine Intelligence, 45(2), 1405-1423
-      year: 2023
+    - title: Probabilistic Integration of Renal Cancer Radiology and Pathology Using Graph Neural Networks
+      institution: International Conference on Medical Image Computing and Computer-Assisted Intervention
+      year: 2025
       description:
-        - S Gao and X Zhuang
+        - S Gao, S Gao, I Machado and M Crispin-Ortuzar
 
-    - title: "Rank-One Network: An Effective Framework for Image Restoration"
-      institution: IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(6), 3224-3238
-      year: 2022
+    - title: "Uncertainty-aware multi-expert knowledge distillation for imbalanced disease grading"
+      institution: International Conference on Medical Image Computing and Computer-Assisted Intervention
+      year: 2025
       description:
-        - S Gao and X Zhuang
+        - S Tong, S Gao, K Liu, Z Huang, H Xu, H Ying and J Wu
 
 - title: Academic Service
   type: nested_list
   contents:
-    - title: Leadership and Organization
-      items:
-        - President, MICCAI Special Interest Group on Explainable AI for Medical Image Analysis, May 2024 - Present
-        - Program Chair, Workshop on Interpretability of Machine Learning in Medical Image Computing, MICCAI 2025, Daejeon, South Korea
-        - Co-organizer, Challenge on Comprehensive Analysis and Computing of Real-world Medical Images, MICCAI 2025, Daejeon, South Korea
-        - Organizer, Online Seminar on Explainable AI for Medical Image Analysis, June 2025
-        - Co-organizer, Challenge on Comprehensive Analysis and Computing of Real-world Medical Images, MICCAI 2024, Marrakesh, Morocco
-        - Co-organizer, First Workshop on Multimodal Imaging and Explainable Artificial Intelligence Analysis and International Symposium on Sino-Swedish Medical Image Analysis, Xiamen, China, July 2024
     - title: Peer Review
       items:
-        - IEEE Transactions on Pattern Analysis and Machine Intelligence
-        - Cancer Discovery
-        - Nature Communications
-        - IEEE Transactions on Image Processing
-        - Medical Image Analysis
-        - IEEE Transactions on Medical Imaging
-        - IEEE Transactions on Neural Networks and Learning Systems
         - Neural Networks
-        - Neurocomputing
-        - NeurIPS, CVPR, ICCV, ECCV, ACM Multimedia, and MICCAI
+        - Information Sciences
+        - NeurIPS, CVPR, ECCV, AAAI, ACM Multimedia, and MICCAI

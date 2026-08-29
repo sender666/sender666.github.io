@@ -1,16 +1,7 @@
 github_users:
-  - shangqigao
-  - zzhwfy
-  - obiyoag
-  - AI4MOL
-
+  - shangde gao
 repo_description_lines_max: 2
 
 github_repos:
-  - shangqigao/TensorCompletion
-  - shangqigao/RONet
-  - shangqigao/BayeSR
-  - shangqigao/BayeSeg
-  - zzhwfy/VSpSR
-  - obiyoag/BayeSeg
+  - aTongs1/UMKD
   - AI4MOL/GraphSeg

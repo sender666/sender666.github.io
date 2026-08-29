@@ -1,31 +1,11 @@
-"zhuang":
-  - firstname: ["Xiahai", "X."]
-    url: https://zmiclab.github.io/zxh/
+"wu":
+  - firstname: ["jian", "J."]
+    url: https://person.zju.edu.cn/0004274
 
 "gao1":
-  - firstname: ["Yibo", "Y."]
-    url: https://obiyoag.github.io
-
-"zhou":
-  - firstname: ["Hangqi", "H."]
-    url: https://ieeexplore.ieee.org/author/37088955032
-
-"wu":
-  - firstname: ["Fuping", "F."]
-    url: https://fupingwu90.github.io/cv/
+  - firstname: ["Shangqi", "S."]
+    url: https://shangqigao.github.io/
 
 "liu":
   - firstname: ["Ke", "K."]
-    url: https://zjukeliu.github.io
-
-"gao2":
-  - firstname: ["Shangde", "S."]
-    url: https://sender666.github.io
-
-"machado":
-  - firstname: ["Ines", "I."]
-    url: https://scholar.google.com/citations?user=Hog_IE8AAAAJ&hl=pt-PT
-
-"crispin-ortuzar":
-  - firstname: ["Mireia", "M."]
-    url: https://scholar.google.com/citations?hl=en&user=TRZzLJgAAAAJ
+    url: https://zjukeliu.github.io/
