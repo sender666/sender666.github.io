@@ -63,7 +63,7 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-was-accepted-by-ieee-transactions-on-computational-social-systems-2026",
           title: 'One paper was accepted by IEEE Transactions on Computational Social Systems 2026.',
           description: "",
-          section: "News",},{id: "news-one-paper-was-accepted-by-cvpr-2026-and-selected-as-oral-presentation-and-award-candidate",
+          section: "News",},{id: "news-one-paper-was-accepted-by-cvpr-2026-and-selected-as-oral-presentation-and-best-paper-award-candidate",
           title: 'One paper was accepted by CVPR 2026 and selected as oral presentation and...',
           description: "",
           section: "News",},{id: "news-one-paper-was-accepted-by-expert-systems-with-applications",
