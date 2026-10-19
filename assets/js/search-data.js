@@ -72,6 +72,12 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-was-accepted-by-bmvc-2026-congratulations-to-hexiang",
           title: 'One paper was accepted by BMVC 2026, congratulations to Hexiang.',
           description: "",
+          section: "News",},{id: "news-three-papers-were-accepted-by-eai-collaboratecom-2026",
+          title: 'Three papers were accepted by EAI CollaborateCom 2026.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-by-neurips-2026",
+          title: 'One paper was accepted by NeurIPS 2026.',
+          description: "",
           section: "News",},{
         id: 'social-github',
         title: 'GitHub',
